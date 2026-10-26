@@ -1,0 +1,19 @@
+[project]
+name = "school-results-api"
+version = "1.0.0"
+description = "FastAPI + PostgreSQL service for recording school assessment results and flagging at-risk students."
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["B008"]  # FastAPI's Depends()/Query() in argument defaults is idiomatic
+
+[tool.ruff.lint.isort]
+known-first-party = ["app", "scripts"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
