@@ -17,3 +17,4 @@ known-first-party = ["app", "scripts"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
